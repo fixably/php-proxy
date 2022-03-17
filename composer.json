@@ -1,5 +1,5 @@
 {
-    "name": "jenssegers/proxy",
+    "name": "fixably/proxy",
     "description": "Proxy library that forwards requests to the desired url and returns the response.",
     "keywords": ["proxy"],
     "homepage": "https://github.com/jenssegers/php-proxy",
@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "^7.0",
         "psr/http-message": "^1.0",
         "guzzlehttp/guzzle": "^7.0",
         "laminas/laminas-diactoros": "^2.0",
