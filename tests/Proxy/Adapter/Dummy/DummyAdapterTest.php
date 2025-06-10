@@ -13,7 +13,7 @@ class DummyAdapterTest extends TestCase
      */
     private $adapter;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->adapter = new DummyAdapter();
     }
@@ -21,7 +21,7 @@ class DummyAdapterTest extends TestCase
     /**
      * @test
      */
-    public function adapter_returns_psr_response()
+    public function test_adapter_returns_psr_response()
     {
         $response = $this->adapter->send(ServerRequestFactory::fromGlobals(), '/');
 

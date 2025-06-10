@@ -32,7 +32,7 @@ class GuzzleAdapterTest extends TestCase
      */
     private $body = 'Totally awesome response body';
 
-    public function setUp()
+    protected function setUp(): void
     {
         $mock = new MockHandler([
             $this->createResponse(),
@@ -46,7 +46,7 @@ class GuzzleAdapterTest extends TestCase
     /**
      * @test
      */
-    public function adapter_returns_psr_response()
+    public function test_adapter_returns_psr_response()
     {
         $response = $this->sendRequest();
 
@@ -56,7 +56,7 @@ class GuzzleAdapterTest extends TestCase
     /**
      * @test
      */
-    public function response_contains_body()
+    public function test_response_contains_body()
     {
         $response = $this->sendRequest();
 
@@ -66,7 +66,7 @@ class GuzzleAdapterTest extends TestCase
     /**
      * @test
      */
-    public function response_contains_statuscode()
+    public function test_response_contains_statuscode()
     {
         $response = $this->sendRequest();
 
@@ -76,7 +76,7 @@ class GuzzleAdapterTest extends TestCase
     /**
      * @test
      */
-    public function response_contains_header()
+    public function test_response_contains_header()
     {
         $response = $this->sendRequest();
 
@@ -86,7 +86,7 @@ class GuzzleAdapterTest extends TestCase
     /**
      * @test
      */
-    public function adapter_sends_request()
+    public function test_adapter_sends_request()
     {
         $request = new Request('http://localhost', 'GET');
 

@@ -11,7 +11,7 @@ class RewriteLocationFilterTest extends TestCase
      */
     private $filter;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->filter = new RewriteLocationFilter();
     }
@@ -19,7 +19,7 @@ class RewriteLocationFilterTest extends TestCase
     /**
      * @test
      */
-    public function filter_rewrites_location()
+    public function test_filter_rewrites_location()
     {
         $_SERVER['SCRIPT_NAME'] = "";
         $redirect_url = 'http://www.example.com/path?arg1=123&arg2=456';
