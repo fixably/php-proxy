@@ -13,7 +13,7 @@ class RemoveEncodingFilterTest extends TestCase
      */
     private $filter;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->filter = new RemoveEncodingFilter();
     }
@@ -21,7 +21,7 @@ class RemoveEncodingFilterTest extends TestCase
     /**
      * @test
      */
-    public function filter_removes_transfer_encoding()
+    public function test_filter_removes_transfer_encoding()
     {
         $request = new Request();
         $response = new Response('php://memory', 200, [RemoveEncodingFilter::TRANSFER_ENCODING => 'foo']);
@@ -37,7 +37,7 @@ class RemoveEncodingFilterTest extends TestCase
     /**
      * @test
      */
-    public function filter_removes_content_encoding()
+    public function test_filter_removes_content_encoding()
     {
         $request = new Request();
         $response = new Response('php://memory', 200, [RemoveEncodingFilter::TRANSFER_ENCODING => 'foo']);
